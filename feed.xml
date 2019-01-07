@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-07T16:06:27+01:00</updated><id>/feed.xml</id><title type="html">Variant Configuration</title><subtitle>Here the SAP Variant Configuration related documents are stored for internal usage.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="/trace/2019/01/04/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-01-04T16:42:14+01:00</published><updated>2019-01-04T16:42:14+01:00</updated><id>/trace/2019/01/04/welcome-to-jekyll</id><content type="html" xml:base="/trace/2019/01/04/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Sim UI- Coding Guidelines</title><link href="/routing/favorites/2019/01/03/coding_guidelines.html" rel="alternate" type="text/html" title="Sim UI- Coding Guidelines" /><published>2019-01-03T00:00:00+01:00</published><updated>2019-01-03T00:00:00+01:00</updated><id>/routing/favorites/2019/01/03/coding_guidelines</id><content type="html" xml:base="/routing/favorites/2019/01/03/coding_guidelines.html">&lt;h1 id=&quot;coding-guidelines&quot;&gt;Coding Guidelines&lt;/h1&gt;
+&lt;h2 id=&quot;project-folder-structure&quot;&gt;Project Folder structure&lt;/h2&gt;
+&lt;h3 id=&quot;freestyle-application&quot;&gt;Freestyle application&lt;/h3&gt;
+&lt;p&gt;For the application always place your files into the corresponding folders, every folder has to be named according to its content:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;view&lt;/code&gt;: place the application’s XML views here&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;controller&lt;/code&gt;: place the views’ controllers here
+    &lt;h3 id=&quot;i18n-should-contain-only-resourcemodels-with-translatable-texts&quot;&gt;i18n: should contain only ResourceModels with translatable texts&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt;: if there is a need for custom JSON models, place them here&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;: only test code, no application logic (qunit &amp;amp; opa5)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;util&lt;/code&gt;: reusable utility functions, which do not strictly belong to any module&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dialog&lt;/code&gt;: application’s dialogs should be placed here. Do not define or build complex dialogs inside controllers&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fragment&lt;/code&gt;: use this folder to place XML fragments&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dao&lt;/code&gt;: folder for data access object(s)
+You can introduce new folders with self-explanatory names if necessary. All of these folders must be placed under the &lt;code class=&quot;highlighter-rouge&quot;&gt;webapp&lt;/code&gt; folder.
+    &lt;h3 id=&quot;components&quot;&gt;Components&lt;/h3&gt;
+    &lt;p&gt;For components, the guideline is the same, the only difference is the root folder.
+Components’ root is: &lt;code class=&quot;highlighter-rouge&quot;&gt;src/LIBRARY_NAMESPACE/components/COMPONENT_NAME&lt;/code&gt;.
+For example for our &lt;code class=&quot;highlighter-rouge&quot;&gt;structurepanel&lt;/code&gt; component the root folder is: &lt;code class=&quot;highlighter-rouge&quot;&gt;src/i2d/lo/lib/vchclf/components/structurepanel&lt;/code&gt;.&lt;/p&gt;
+    &lt;h2 id=&quot;general-javascript-guidelines&quot;&gt;General JavaScript guidelines&lt;/h2&gt;
+    &lt;h3 id=&quot;coding-style&quot;&gt;Coding style&lt;/h3&gt;
+    &lt;p&gt;The basic guides can be found on the Fiori wiki page:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;https://wiki.wdf.sap.corp/wiki/display/fiorisuite/Fiori+Essentials
+And on the following SAP Help page:&lt;/li&gt;
+  &lt;li&gt;https://help.sap.com/saphelp_uiaddon10/helpdata/en/ed/ed636b85584cd586b1fe231d2b5dac/content.htm?loaded_from_frameset=true
+In short, please pay special attention for the following rules:&lt;/li&gt;
+  &lt;li&gt;only use &lt;a href=&quot;http://speakingjs.com/es5/index.html&quot;&gt;ES5 syntax&lt;/a&gt; (exceptions: &lt;a href=&quot;http://exploringjs.com/es6/ch_promises.html&quot;&gt;Promises&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;always use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;use strict&quot;;&lt;/code&gt;&lt;/a&gt; command in top level functions&lt;/li&gt;
+  &lt;li&gt;always correct all of the &lt;a href=&quot;https://eslint.org/&quot;&gt;ESLint&lt;/a&gt; findings (you may use this &lt;a href=&quot;./res/.eslintrc&quot;&gt;sample ESLintRC file&lt;/a&gt; in your editor)
+    &lt;ul&gt;
+      &lt;li&gt;you can find more information on how to setup ESLint for VSCode in &lt;a href=&quot;./vscode_es_lint_how_to.md&quot;&gt;this&lt;/a&gt; file&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;use the built-in beautifier for js and pay attention to indentation, line breaks and empty lines&lt;/li&gt;
+  &lt;li&gt;always use &lt;a href=&quot;#Hungarian-Notation&quot;&gt;Hungarian notation&lt;/a&gt; for variable names&lt;/li&gt;
+  &lt;li&gt;use &lt;a href=&quot;http://wiki.c2.com/?LowerCamelCase&quot;&gt;Lower Camel Case&lt;/a&gt; everywhere (i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;sMaterialId&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;aConfigurableProducts&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;use underscore prefix for functions which meant to be private&lt;/li&gt;
+  &lt;li&gt;use “on” prefix for all event handlers (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;onButtonPressed&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;always use async operations, do not block the UI
+In general, never use “hacky” or unnecessarily weird ways in your implementations (e.g. do not use 1! for false).
+Always use self-explaining variable/function names, do not consider length (the minifier will take care of it).
+When you declare new variables, always declare them in block scope, even ES5 supports function scope only (see &lt;a href=&quot;http://speakingjs.com/es5/ch16.html&quot;&gt;this&lt;/a&gt;).
+Declaring on block level improves readability.
+Pay special attention on re-declaration, with block scope usage of variables, it’s easy to declare for example an &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; iterator over and over again.
+Never reuse your previous variables in a different context (i.e. use multiple iterators for different loops (&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt; etc), do not reuse existing ones)!
+When you write a logic that could be hard to understand by the others, use comments. It will be useful even for you after a few weeks…
+But when you feel that your logic is getting too complex (i.e. nested loops inside callbacks) consider refactoring your code or ask for help, if you have no idea how to do it.
+Always pay attention to define clear signature for your functions. JavaScript is a very dynamic language, if your parameter lists are messy, your whole code will be messy.
+Always pay attention to the structure of your code!
+Golden rules:&lt;/li&gt;
+  &lt;li&gt;Always declare variables in the beginning of the block, unless it really has to be done differently&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eslint.org/docs/rules/newline-after-var&quot;&gt;Empty line after declaration block&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Empty line between the function body closing bracket and the next function’s JSDoc section&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eslint.org/docs/rules/padding-line-between-statements&quot;&gt;Empty line before and after if blocks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eslint.org/docs/rules/newline-before-return&quot;&gt;Empty line before returning from function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eslint.org/docs/rules/operator-linebreak&quot;&gt;When a statement is too long, put line breaks after operators&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Never call the same function more than once. Create a reference for its result if it’s needed&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + B&lt;/code&gt; is your friend (at least on English layout)&lt;/li&gt;
+  &lt;li&gt;Class names are upper, variables are lower camel case
+    &lt;h3 id=&quot;modularization&quot;&gt;Modularization&lt;/h3&gt;
+    &lt;p&gt;Always modularize your implementations. To define modules, use the sap.ui.define function. Defining a new module is as easy as:&lt;/p&gt;
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;path/to/some/Dependency&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MySingleton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// do some stuff&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MySingleton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;You can outsource dialogs, complex logic blocks, formatters or any other coding which is independent from the controllers/other modules.
+Using modules improves readability and reusability.
+Do not consider network delays or performance issues when creating new modules as the build script will package the whole application into one bundle.
+Modularization is also important in case of views and fragments, since XML views can be messy and hard to read when they become bigger.
+Using multiple files in this case also will improve readability and usability.
+When you create a new dialog which contains multiple controls, always create a new fragment.
+For tab bars also consider having every tab in a separate view.
+When two views are similar in some way, consider inheritance.&lt;/p&gt;
+    &lt;h2 id=&quot;ui5-best-practices&quot;&gt;UI5 best practices&lt;/h2&gt;
+    &lt;h3 id=&quot;accessing-a-control&quot;&gt;Accessing a control&lt;/h3&gt;
+    &lt;p&gt;Reduce the need for setting control properties from the controller.
+UI5’s controllers provide an easy-to-use &lt;code class=&quot;highlighter-rouge&quot;&gt;byId&lt;/code&gt; function which can query for the view’s controls by id, but this will make your code harder to read and maintain.
+&lt;em&gt;Solution&lt;/em&gt;: bind everything which makes sense!
+For setting controls’ busy state or visibility, you can define controller or component level json models and bind these properties against this model.
+After this, you can set this property and leave the rest to the binding mechanism.
+There are cases when &lt;code class=&quot;highlighter-rouge&quot;&gt;byId&lt;/code&gt; is needed, in which case use it in a self-explanatory way.
+The first thing is use an id in the XML view which identifies the control not only for the framework, but also for you and for the others.
+Prefix your id with &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt; and give it a meaningful name.
+For example, if you want to add an identifier for a list which contains materials name it &lt;code class=&quot;highlighter-rouge&quot;&gt;idMaterialList&lt;/code&gt;.
+For event handler functions, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;on&lt;/code&gt; prefix and provide meaningful naming.
+For example, if a button triggers a navigation to a new page, which is called “Notes” name it &lt;code class=&quot;highlighter-rouge&quot;&gt;onNavigateToNotesPage&lt;/code&gt;.
+In event handlers always use oEvent.getSource() to get the sender control.
+This event parameter usually contains all information you need to perform your logic.&lt;/p&gt;
+    &lt;h3 id=&quot;data-binding&quot;&gt;Data binding&lt;/h3&gt;
+    &lt;p&gt;When working with controls, it’s easy to get the bound object.
+Always use the &lt;code class=&quot;highlighter-rouge&quot;&gt;getBindingContext&lt;/code&gt; method where the corresponding model and binding path are returned.
+With these values you can perform data manipulation on the model with the &lt;code class=&quot;highlighter-rouge&quot;&gt;setProperty&lt;/code&gt; call on the model object.
+In case of two-way binding, use &lt;code class=&quot;highlighter-rouge&quot;&gt;submitChanges&lt;/code&gt; to write the data back to the ABAP server.&lt;/p&gt;
+    &lt;h3 id=&quot;dao&quot;&gt;DAO&lt;/h3&gt;
+    &lt;p&gt;It is a good practice to use data access objects in applications.
+The role of these objects is to detach the data access layer from your controllers and organize them into one separate module.
+In a DAO file there can be functions for CRUD operations.
+These functions can be reused in every controller and module.
+Using DAO helps maintenance, readability and reusability.
+Inside a DAO function use promises (preferably the ES6 Promise function).
+Promises provide a standardized way to handle these asynchronous operations.&lt;/p&gt;
+    &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;path/to/some/Dependency&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;_oModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;…&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;…&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;…&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;readSomeEntry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;c1&quot;&gt;// … some logic on the _oModel, resolve the deferred object when the data is ready:&lt;/span&gt;
+              &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;oSomeData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+              &lt;span class=&quot;c1&quot;&gt;// …&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Never format the service response inside DAO.
+DAO is meant to be the accessing layer; its response should be generic because it can be called from different places in the application.
+The DAO needs a reference for the ODataModel object which can be set in an initializer.
+In case of multiple DAOs consider inheriting from a base class where the models are set.
+&lt;a href=&quot;./img/dao.png&quot;&gt;&lt;img src=&quot;./img/dao.png&quot; alt=&quot;DAO&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;h3 id=&quot;i18n&quot;&gt;i18n&lt;/h3&gt;
+    &lt;p&gt;All UI texts should be located in the i18n properties file.
+Inside the file always use meaningful names for the id.
+In our case prefix names with &lt;code class=&quot;highlighter-rouge&quot;&gt;vch_&lt;/code&gt; and provide self-explanatory names which tell anybody where the text is used.
+Meaningful name means that it should be obvious that where the text is used.
+Always use lower case and separate words by underscore.
+Example: &lt;code class=&quot;highlighter-rouge&quot;&gt;vch_tabbar_tab_product_productlabel&lt;/code&gt; where it’s visible that the text is located on the tab bar&lt;code class=&quot;highlighter-rouge&quot;&gt;s product tab and it is a label for a product.
+If you want to define some common texts which can be used everywhere (e.g. a &lt;/code&gt;Cancel&lt;code class=&quot;highlighter-rouge&quot;&gt; button) name it like: &lt;/code&gt;vch_commons_button_cancel&lt;code class=&quot;highlighter-rouge&quot;&gt;.
+Always keep in mind that our application will be translated to RTL languages as well, so you cannot hardcode anything!
+When you have to provide a 'title (description)' style text, always use parameters and i18n entry for it: &lt;/code&gt;{0} ({1})`.
+In this case translators will be able to change the order of the parameters.
+Never concatenate strings which will appear on the UI, neither in JS code nor in XML views.
+String concatenations in XML views will result in build failure.&lt;/p&gt;
+    &lt;h3 id=&quot;controllers&quot;&gt;Controllers&lt;/h3&gt;
+    &lt;p&gt;Inside a controller organize functions to 3 groups:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;public&lt;/li&gt;
+  &lt;li&gt;events&lt;/li&gt;
+  &lt;li&gt;protected&lt;/li&gt;
+  &lt;li&gt;private
+The first method in the controller should always be the &lt;code class=&quot;highlighter-rouge&quot;&gt;onInit&lt;/code&gt; (if needed).
+After the initializer add the public, the private and the event blocks in this order.&lt;/li&gt;
+  &lt;li&gt;Public and protected functions do not need a prefix, just add meaningful names for them, e.g.: &lt;code class=&quot;highlighter-rouge&quot;&gt;setRoutingModel&lt;/code&gt; and use the proper JSDoc&lt;/li&gt;
+  &lt;li&gt;Event handlers (here we can have the lifecycle methods too) should start with &lt;code class=&quot;highlighter-rouge&quot;&gt;on&lt;/code&gt; prefix, e.g.: &lt;code class=&quot;highlighter-rouge&quot;&gt;onFilterChanged&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;onButtonPressed&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Private function names should start with an underscore, e.g.: &lt;code class=&quot;highlighter-rouge&quot;&gt;_performPrivateOperation&lt;/code&gt;
+    &lt;h2 id=&quot;xml-views&quot;&gt;XML views&lt;/h2&gt;
+    &lt;h3 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h3&gt;
+    &lt;p&gt;Only use those namespaces which are really needed.
+Always make sure that unused namespaces are removed.
+When you have to import a library (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;sap.ui.layout&lt;/code&gt;), make sure that it is added to the dependencies in manifest.json.
+This will improve performance by preloading it, and it is mandatory anyways. Build will fail without it.&lt;/p&gt;
+    &lt;h3 id=&quot;coding-style-1&quot;&gt;Coding style&lt;/h3&gt;
+    &lt;p&gt;In XML views fortunately there are not many possibilities to write logic, so there won’t be tons of rules.
+When there’s a need for an id for a control, have it as the first attributes.
+The order of the other attributes does not matter.
+Never use complex expression bindings in the views.
+Expression binding is a cool stuff, but you cannot debug it and it may also be hard to understand by others.
+You can use it in simple cases, e.g.: &lt;code class=&quot;highlighter-rouge&quot;&gt;visibility=&quot;{= ${flag} === 'X'}&quot;&lt;/code&gt;.
+In case of more complex logic or for reuse support always use formatter functions.&lt;/p&gt;
+    &lt;h3 id=&quot;indentation--formatting&quot;&gt;Indentation &amp;amp; formatting&lt;/h3&gt;
+    &lt;p&gt;Unfortunately, WebIDE’s XML beautifier uses inline arrangement.
+In case of multiple attributes in the nodes, it can be hard to find a specific one.
+To avoid it, please always format your views in a way, that all of the attributes are in a new line.
+For reference, check this example:
+```xml&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;mvc:View xmlns:core=&quot;sap.ui.core&quot; xmlns:mvc=&quot;sap.ui.mvc&quot; xmlns=&quot;sap.m&quot; controllerName=&quot;i2d.lo.lib.vchclf.simulation.components.selectiontabstrip.controller.Favorites&quot;&gt;
+	&lt;List items=&quot;{
+			path: 'sim&amp;gt;/FavoriteSet',
+			sorter: {path: 'ObjectDescription'},
+			filters: [{
+				path: 'ObjectType',
+				operator: 'EQ',
+				value1: 'PROD'
+			}]
+		}&quot; showSeparators=&quot;None&quot;&gt;
+		&lt;items&gt;
+			&lt;CustomListItem&gt;
+				&lt;HBox&gt;
+					&lt;core:Icon id=&quot;idFavoriteIcon&quot; src=&quot;sap-icon://favorite&quot; press=&quot;onUnfavoritePressed&quot; tooltip=&quot;{i18n&amp;gt;/vch_favrec_tt_removefromfavorites}&quot; /&gt;
+					&lt;link text=&quot;{
+							parts: [
+								{path: 'sim&amp;gt;ObjectDescription'},
+								{path: 'sim&amp;gt;ObjectId'},
+								{path: 'sim&amp;gt;PlantDescription'},
+								{path: 'sim&amp;gt;Plant'}
+							],
+							formatter: '.testUtils.listItemFormatter'
+						}&quot; class=&quot;sapUiSmallMarginBegin&quot; press=&quot;onQuickEntryPressed&quot; /&gt;
+				&lt;/HBox&gt;
+			&lt;/CustomListItem&gt;
+		&lt;/items&gt;
+	&lt;/List&gt;
+&lt;/mvc:View&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This layout can be achieved only manually though...
+And of course, if the beautify function is triggered the complete view will be transformed to the inline style.
+So in case of XML views __NEVER__ use beautification!
+This means you have to manually provide the correct indentation, so please always pay attention to it.
+### Infrastructure
+Jenkins jobs:
+- SimulationS1
+	- [i2d.lo.vchclf.simulations1-masters1-CI](https://fiodevci03.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-CI/)
+	- [i2d.lo.vchclf.simulations1-masters1-abap-upload](https://fiodevci03.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-abap-upload/)
+	- [i2d.lo.vchclf.simulations1-masters1-gerrit-voter](https://fiovoter.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-gerrit-voter/)
+- Library
+	- [i2d.lo.lib.vchclf-masters1-CI](https://fiodevci03.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-CI/)
+	- [i2d.lo.lib.vchclf-masters1-abap-upload](https://fiodevci03.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-abap-upload/)
+	- [i2d.lo.lib.vchclf-masters1-gerrit-voter](https://fiovoter.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-gerrit-voter/)
+[![Continuous Integration](./img/ci.png)](./img/ci.png)
+## Documentation
+In Fiori UI development, we have to document our application/component using JSDoc.
+You can generate JSDoc comments with the `Ctrl + Alt + J` shortcut.
+This functionality works a little strange, you have to place your cursor on the function keyword to make it happen.
+An example JSDoc comment:
+``` javascript
+/**
+ * Formats the incoming parameters for the favorites &amp;amp; recently used list
+ * @param {string} sObjDesc - Description of the object
+ * @param {string} sObjId - ID of the object
+ * @param {string} sPlantDesc - Plant description
+ * @param {string} sPlantId - Plant ID
+ * @returns {string} Formatted string for displaying on the UI
+ * @public
+ */
+listItemFormatter: function (sObjDesc, sObjId, sPlantDesc, sPlantId) {
+	return &quot;dummy&quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Every method should be documented this way, even the private ones.
+For reference and available keywords, please visit the official page of &lt;a href=&quot;http://usejsdoc.org/&quot;&gt;JSDoc&lt;/a&gt;.
+Every JSDoc should be consistent so always use the mentioned format. Do not use any unnecessary flags.&lt;/p&gt;
+&lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
+&lt;p&gt;To maintain a clear and concise Git history please adhere the following rules when writing your commit messages.&lt;/p&gt;
+&lt;h3 id=&quot;git-setup&quot;&gt;Git Setup&lt;/h3&gt;
+&lt;p&gt;If you use Git locally on your machine, please make sure that you configure Git with your name and email address correctly.
+Use the following commands to do so:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When instaling Git on your machine you are asked what text editor you would like to use for writing Git commit messages.
+If you are not familiar with &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt; editor (Git’s default), and missed this setting during installation, you may use the following command to change the default editor to e.g. Nodepad++:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;See the following link for more information:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup&quot;&gt;Getting Started First Time Git Setup&lt;/a&gt;
+    &lt;h3 id=&quot;commit-title&quot;&gt;Commit title&lt;/h3&gt;
+    &lt;p&gt;The first line of the commit message is the title.
+This should contain a &lt;strong&gt;short&lt;/strong&gt; description of what changes have been done in the commit.
+Please adhere to these rules:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Try limiting the length of the title to 50 characters never go above 72
+    &lt;ul&gt;
+      &lt;li&gt;If your change needs further explanation use the message body&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Separate the commit title from the message body with an blank line&lt;/li&gt;
+  &lt;li&gt;Prefix your commit message with the appropriate prefix (see table below)&lt;/li&gt;
+  &lt;li&gt;Use the imperative mood in the title
+    &lt;ul&gt;
+      &lt;li&gt;The title should read as if &lt;em&gt;“If I apply this commit it will&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Commit message title&amp;gt;&lt;/code&gt;”&lt;/li&gt;
+      &lt;li&gt;e.g.: &lt;code class=&quot;highlighter-rouge&quot;&gt;[TEST] Add missing OPA tests for Structure Panel&lt;/code&gt; -&amp;gt; &lt;em&gt;“If I apply this commit it will&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;[TEST] Add missing OPA tests for Structure Panel&lt;/code&gt;”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Capiatlize the subject line&lt;/li&gt;
+  &lt;li&gt;Do not use puctuation in the title
+| Prefix		| When to use?												|
+| ————- | ——————————————————— |
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[TEST]&lt;/code&gt;		| Changes done in test code									|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[FIX]&lt;/code&gt;		| Changes done due to an incident							|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[INTERNAL]&lt;/code&gt;	| Minor changes (e.g.: TODO removal, ESLint corrections)	|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[FEATURE]&lt;/code&gt;	| Other cases not covered above								|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[POM]&lt;/code&gt;		| Updating the &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;									|
+| &lt;code class=&quot;highlighter-rouge&quot;&gt;[GITIGNORE]&lt;/code&gt;	| Updating the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt;									|
+    &lt;h3 id=&quot;commit-message-body&quot;&gt;Commit message body&lt;/h3&gt;
+    &lt;p&gt;Use the message body to explain the details of the changes if needed (for trivial changes you may omit the message body completely).
+Please adhere to these rules:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Wrap the text body at 72 characters&lt;/li&gt;
+  &lt;li&gt;Use the body to explain what you did and why instead of how (that should speak for itself from the code)&lt;/li&gt;
+  &lt;li&gt;Add references at the end of the commit message body (these will be converted to links in Gerrit)
+    &lt;ul&gt;
+      &lt;li&gt;BCP: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;incident number&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;JIRA: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;backlog item id / task id / both&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Leave an empty line at the end of the commit message body
+    &lt;ul&gt;
+      &lt;li&gt;This is where the Gerrit Change-Id will be inserted
+A sample Git commit message:
+```
+[FEATURE] The Title is a short summary of your Commit
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like &lt;code class=&quot;highlighter-rouge&quot;&gt;log&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;shortlog&lt;/code&gt;
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;rebase&lt;/code&gt; can get confused if you run the two together.
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequences of this
+change? Here’s the place to explain them.
+Further paragraphs come after blank lines.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Bullet points are okay, too&lt;/li&gt;
+  &lt;li&gt;Typically a hyphen is used for the bullet
+Put any further references at the bottom, like this (these will
+generate clickable links in Gerrit):
+BCP: 123456789
+JIRA: SCON2-1234, SCON2-4567&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;Leave a blank line at the end, this is where the Gerrit Change-Id
+will be inserted&amp;gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;For more detailed description of these rules please see the following blog post on writing Git commit messages:
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+### Commit hooks
+If you use Git locally on your machine, please use the following commit hooks to ensure that a Gerrit Change-Id is generated whenever you do a commit or a merge.
+Copy these two files and paste them into the `.git/hooks` folder of all your repositories:
+- [commit-msg](./hooks/commit-msg)
+- [prepare-commit-msg](./hooks/prepare-commit-msg)
+### Aliases
+If you use Git locally on your machine, you may find the following aliases helpful (copy and paste them into your `.gintconfig` file):
+```gitconfig
+[alias]
+	ll = log --pretty='%C(red bold)%h%Creset |%C(yellow bold)%d%Creset %s %C(green)%cd %Creset%C(yellow)(%cr)%Creset %C(cyan)[%an]%Creset' --graph --date=format:'%Y-%m-%d %H:%M:%S' --all
+	sc = show --pretty='parent %C(red bold)%p%Creset commit %C(red bold)%h%Creset%C(yellow bold)%d%Creset%n%n%w(72,2,2)%s%n%n%b%n%n%w(72,0,0)%Cgreen%ad (%ar)%Creset %C(cyan)%an%Creset' --date=format:'%Y-%m-%d %H:%M:%S' --name-only
+	co = checkout
+	st = status --short --branch
+	gerrit = push origin HEAD:refs/for/masters1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Explanations:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ll&lt;/code&gt; - This will do shortlog for all the branches (think “[l]og al[l]”)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sc&lt;/code&gt; - You can use this to look into a commit (think “[s]how [c]ommit”)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;co&lt;/code&gt; - You can use this to checkout a banch (think “[c]heck[o]ut”)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;st&lt;/code&gt; - You can use this to see a status of your working directory (think “[st]atus”)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gerrit&lt;/code&gt; - You can use this to push the current &lt;code class=&quot;highlighter-rouge&quot;&gt;HEAD&lt;/code&gt; to Gerrit (no thinking is needed for this)
+    &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+    &lt;h3 id=&quot;useful-links&quot;&gt;Useful links&lt;/h3&gt;
+    &lt;p&gt;JavaScript Coding Guidelines&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;https://help.sap.com/saphelp_uiaddon10/helpdata/en/ed/ed636b85584cd586b1fe231d2b5dac/content.htm?loaded_from_frameset=true
+WebIDE @ SAPJAM&lt;/li&gt;
+  &lt;li&gt;https://jam4.sapjam.com/groups/about_page/5EHZq2fndLhIvK0Q8DM25a
+General information about fiori&lt;/li&gt;
+  &lt;li&gt;https://wiki.wdf.sap.corp/wiki/display/fiorisuite/Fiori+Essentials&lt;/li&gt;
+  &lt;li&gt;https://wiki.wdf.sap.corp/wiki/display/fioritech/Fiori+Technology+Home
+UI5 @ Stack Overflow (both SAP UI5 and OpenUI5)&lt;/li&gt;
+  &lt;li&gt;http://stackoverflow.com/questions/tagged/sapui5
+UI5 @ SAPJAM&lt;/li&gt;
+  &lt;li&gt;https://jam4.sapjam.com/groups/about_page/7MFgdXHJVVv2BWC8g0Ubep&lt;/li&gt;
+  &lt;li&gt;https://jam4.sapjam.com/groups/about_page/46nPHpwJRbaNkd9QFAWtiW
+UI5 topic owners&lt;/li&gt;
+  &lt;li&gt;http://vesapui5.dhcp.wdf.sap.corp:8000/ui5team/#/ownership
+UI5 @ Jira&lt;/li&gt;
+  &lt;li&gt;https://sapjira.wdf.sap.corp/secure/IssueHierarchyOverview!default.jspa?projectKey=CPOUIFPHOENIXCORE&amp;amp;displayMode=ranking
+Speaking JavaScript&lt;/li&gt;
+  &lt;li&gt;http://speakingjs.com/es5/index.html
+Exploring ES6&lt;/li&gt;
+  &lt;li&gt;http://exploringjs.com/es6/
+JSDoc:&lt;/li&gt;
+  &lt;li&gt;http://usejsdoc.org/
+ESLint:&lt;/li&gt;
+  &lt;li&gt;https://eslint.org/
+SAP recommended ESLint Code Checks:&lt;/li&gt;
+  &lt;li&gt;https://help.sap.com/saphelp_uiaddon10/helpdata/en/1b/a0e44f1036439b95f25527664f14f7/frameset.htm
+Sample ESLintRC file:&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./res/.eslintrc&quot;&gt;.eslintrc&lt;/a&gt;
+Pro Git, a free online book on Git:&lt;/li&gt;
+  &lt;li&gt;https://git-scm.com/book/en/v2/
+How to Write a Git Commit Message:&lt;/li&gt;
+  &lt;li&gt;https://chris.beams.io/posts/git-commit/
+    &lt;h3 id=&quot;hungarian-notation&quot;&gt;Hungarian Notation&lt;/h3&gt;
+    &lt;p&gt;| Type					| Prefix	| Sample		|
+| ——————— | ——— | ————- |
+| array					| &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;aEntries&lt;/code&gt;	|
+| boolean				| &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;bEnabled&lt;/code&gt;	|
+| date					| &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;dToday&lt;/code&gt;		|
+| float					| &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;fDecimal&lt;/code&gt;	|
+| function				| &lt;code class=&quot;highlighter-rouge&quot;&gt;fn&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;fnFunction&lt;/code&gt;	|
+| int					| &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;iCount&lt;/code&gt;		|
+| jQuery object			| &lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;$DomRef&lt;/code&gt;		|
+| map / assoc. array	| &lt;code class=&quot;highlighter-rouge&quot;&gt;m&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;mParameters&lt;/code&gt;	|
+| object				| &lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;oDomRef&lt;/code&gt;		|
+| regular expression	| &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;rPattern&lt;/code&gt;	|
+| string				| &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;sId&lt;/code&gt;			|
+| variant types			| &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;		| &lt;code class=&quot;highlighter-rouge&quot;&gt;vVariant&lt;/code&gt;	|&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>zoli</name></author><summary type="html">Coding Guidelines Project Folder structure Freestyle application For the application always place your files into the corresponding folders, every folder has to be named according to its content: view: place the application’s XML views here controller: place the views’ controllers here i18n: should contain only ResourceModels with translatable texts model: if there is a need for custom JSON models, place them here test: only test code, no application logic (qunit &amp;amp; opa5) util: reusable utility functions, which do not strictly belong to any module dialog: application’s dialogs should be placed here. Do not define or build complex dialogs inside controllers fragment: use this folder to place XML fragments dao: folder for data access object(s) You can introduce new folders with self-explanatory names if necessary. All of these folders must be placed under the webapp folder. Components For components, the guideline is the same, the only difference is the root folder. Components’ root is: src/LIBRARY_NAMESPACE/components/COMPONENT_NAME. For example for our structurepanel component the root folder is: src/i2d/lo/lib/vchclf/components/structurepanel. General JavaScript guidelines Coding style The basic guides can be found on the Fiori wiki page: https://wiki.wdf.sap.corp/wiki/display/fiorisuite/Fiori+Essentials And on the following SAP Help page: https://help.sap.com/saphelp_uiaddon10/helpdata/en/ed/ed636b85584cd586b1fe231d2b5dac/content.htm?loaded_from_frameset=true In short, please pay special attention for the following rules: only use ES5 syntax (exceptions: Promises) always use the &quot;use strict&quot;; command in top level functions always correct all of the ESLint findings (you may use this sample ESLintRC file in your editor) you can find more information on how to setup ESLint for VSCode in this file use the built-in beautifier for js and pay attention to indentation, line breaks and empty lines always use Hungarian notation for variable names use Lower Camel Case everywhere (i.e. sMaterialId or aConfigurableProducts) use underscore prefix for functions which meant to be private use “on” prefix for all event handlers (e.g. onButtonPressed) always use async operations, do not block the UI In general, never use “hacky” or unnecessarily weird ways in your implementations (e.g. do not use 1! for false). Always use self-explaining variable/function names, do not consider length (the minifier will take care of it). When you declare new variables, always declare them in block scope, even ES5 supports function scope only (see this). Declaring on block level improves readability. Pay special attention on re-declaration, with block scope usage of variables, it’s easy to declare for example an i iterator over and over again. Never reuse your previous variables in a different context (i.e. use multiple iterators for different loops (i, j, k etc), do not reuse existing ones)! When you write a logic that could be hard to understand by the others, use comments. It will be useful even for you after a few weeks… But when you feel that your logic is getting too complex (i.e. nested loops inside callbacks) consider refactoring your code or ask for help, if you have no idea how to do it. Always pay attention to define clear signature for your functions. JavaScript is a very dynamic language, if your parameter lists are messy, your whole code will be messy. Always pay attention to the structure of your code! Golden rules: Always declare variables in the beginning of the block, unless it really has to be done differently Empty line after declaration block Empty line between the function body closing bracket and the next function’s JSDoc section Empty line before and after if blocks Empty line before returning from function When a statement is too long, put line breaks after operators Never call the same function more than once. Create a reference for its result if it’s needed Ctrl + Alt + B is your friend (at least on English layout) Class names are upper, variables are lower camel case Modularization Always modularize your implementations. To define modules, use the sap.ui.define function. Defining a new module is as easy as: sap.ui.define([ &quot;path/to/some/Dependency&quot; ], function (Dependency) { var MySingleton = function () { // do some stuff } return new MySingleton(); }) You can outsource dialogs, complex logic blocks, formatters or any other coding which is independent from the controllers/other modules. Using modules improves readability and reusability. Do not consider network delays or performance issues when creating new modules as the build script will package the whole application into one bundle. Modularization is also important in case of views and fragments, since XML views can be messy and hard to read when they become bigger. Using multiple files in this case also will improve readability and usability. When you create a new dialog which contains multiple controls, always create a new fragment. For tab bars also consider having every tab in a separate view. When two views are similar in some way, consider inheritance. UI5 best practices Accessing a control Reduce the need for setting control properties from the controller. UI5’s controllers provide an easy-to-use byId function which can query for the view’s controls by id, but this will make your code harder to read and maintain. Solution: bind everything which makes sense! For setting controls’ busy state or visibility, you can define controller or component level json models and bind these properties against this model. After this, you can set this property and leave the rest to the binding mechanism. There are cases when byId is needed, in which case use it in a self-explanatory way. The first thing is use an id in the XML view which identifies the control not only for the framework, but also for you and for the others. Prefix your id with id and give it a meaningful name. For example, if you want to add an identifier for a list which contains materials name it idMaterialList. For event handler functions, use the on prefix and provide meaningful naming. For example, if a button triggers a navigation to a new page, which is called “Notes” name it onNavigateToNotesPage. In event handlers always use oEvent.getSource() to get the sender control. This event parameter usually contains all information you need to perform your logic. Data binding When working with controls, it’s easy to get the bound object. Always use the getBindingContext method where the corresponding model and binding path are returned. With these values you can perform data manipulation on the model with the setProperty call on the model object. In case of two-way binding, use submitChanges to write the data back to the ABAP server. DAO It is a good practice to use data access objects in applications. The role of these objects is to detach the data access layer from your controllers and organize them into one separate module. In a DAO file there can be functions for CRUD operations. These functions can be reused in every controller and module. Using DAO helps maintenance, readability and reusability. Inside a DAO function use promises (preferably the ES6 Promise function). Promises provide a standardized way to handle these asynchronous operations. sap.ui.define([ &quot;path/to/some/Dependency&quot; ], function (Dependency) { return { _oModel: …, init: function (…) { … }, readSomeEntry: function (oParams) { return new Promise(function (resolve, reject) { // … some logic on the _oModel, resolve the deferred object when the data is ready: resolve(oSomeData); // … }); } } }) Never format the service response inside DAO. DAO is meant to be the accessing layer; its response should be generic because it can be called from different places in the application. The DAO needs a reference for the ODataModel object which can be set in an initializer. In case of multiple DAOs consider inheriting from a base class where the models are set. i18n All UI texts should be located in the i18n properties file. Inside the file always use meaningful names for the id. In our case prefix names with vch_ and provide self-explanatory names which tell anybody where the text is used. Meaningful name means that it should be obvious that where the text is used. Always use lower case and separate words by underscore. Example: vch_tabbar_tab_product_productlabel where it’s visible that the text is located on the tab bars product tab and it is a label for a product. If you want to define some common texts which can be used everywhere (e.g. a Cancel button) name it like: vch_commons_button_cancel. Always keep in mind that our application will be translated to RTL languages as well, so you cannot hardcode anything! When you have to provide a 'title (description)' style text, always use parameters and i18n entry for it: {0} ({1})`. In this case translators will be able to change the order of the parameters. Never concatenate strings which will appear on the UI, neither in JS code nor in XML views. String concatenations in XML views will result in build failure. Controllers Inside a controller organize functions to 3 groups: public events protected private The first method in the controller should always be the onInit (if needed). After the initializer add the public, the private and the event blocks in this order. Public and protected functions do not need a prefix, just add meaningful names for them, e.g.: setRoutingModel and use the proper JSDoc Event handlers (here we can have the lifecycle methods too) should start with on prefix, e.g.: onFilterChanged, onButtonPressed Private function names should start with an underscore, e.g.: _performPrivateOperation XML views Namespaces Only use those namespaces which are really needed. Always make sure that unused namespaces are removed. When you have to import a library (e.g. sap.ui.layout), make sure that it is added to the dependencies in manifest.json. This will improve performance by preloading it, and it is mandatory anyways. Build will fail without it. Coding style In XML views fortunately there are not many possibilities to write logic, so there won’t be tons of rules. When there’s a need for an id for a control, have it as the first attributes. The order of the other attributes does not matter. Never use complex expression bindings in the views. Expression binding is a cool stuff, but you cannot debug it and it may also be hard to understand by others. You can use it in simple cases, e.g.: visibility=&quot;{= ${flag} === 'X'}&quot;. In case of more complex logic or for reuse support always use formatter functions. Indentation &amp;amp; formatting Unfortunately, WebIDE’s XML beautifier uses inline arrangement. In case of multiple attributes in the nodes, it can be hard to find a specific one. To avoid it, please always format your views in a way, that all of the attributes are in a new line. For reference, check this example: ```xml This layout can be achieved only manually though... And of course, if the beautify function is triggered the complete view will be transformed to the inline style. So in case of XML views __NEVER__ use beautification! This means you have to manually provide the correct indentation, so please always pay attention to it. ### Infrastructure Jenkins jobs: - SimulationS1 - [i2d.lo.vchclf.simulations1-masters1-CI](https://fiodevci03.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-CI/) - [i2d.lo.vchclf.simulations1-masters1-abap-upload](https://fiodevci03.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-abap-upload/) - [i2d.lo.vchclf.simulations1-masters1-gerrit-voter](https://fiovoter.wdf.sap.corp/job/i2d.lo.vchclf.simulations1-masters1-gerrit-voter/) - Library - [i2d.lo.lib.vchclf-masters1-CI](https://fiodevci03.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-CI/) - [i2d.lo.lib.vchclf-masters1-abap-upload](https://fiodevci03.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-abap-upload/) - [i2d.lo.lib.vchclf-masters1-gerrit-voter](https://fiovoter.wdf.sap.corp/job/i2d.lo.lib.vchclf-masters1-gerrit-voter/) [![Continuous Integration](./img/ci.png)](./img/ci.png) ## Documentation In Fiori UI development, we have to document our application/component using JSDoc. You can generate JSDoc comments with the `Ctrl + Alt + J` shortcut. This functionality works a little strange, you have to place your cursor on the function keyword to make it happen. An example JSDoc comment: ``` javascript /** * Formats the incoming parameters for the favorites &amp;amp; recently used list * @param {string} sObjDesc - Description of the object * @param {string} sObjId - ID of the object * @param {string} sPlantDesc - Plant description * @param {string} sPlantId - Plant ID * @returns {string} Formatted string for displaying on the UI * @public */ listItemFormatter: function (sObjDesc, sObjId, sPlantDesc, sPlantId) { return &quot;dummy&quot;; } Every method should be documented this way, even the private ones. For reference and available keywords, please visit the official page of JSDoc. Every JSDoc should be consistent so always use the mentioned format. Do not use any unnecessary flags. Git To maintain a clear and concise Git history please adhere the following rules when writing your commit messages. Git Setup If you use Git locally on your machine, please make sure that you configure Git with your name and email address correctly. Use the following commands to do so: git config --global user.name &quot;John Doe&quot; git config --global user.email johndoe@example.com When instaling Git on your machine you are asked what text editor you would like to use for writing Git commit messages. If you are not familiar with vi editor (Git’s default), and missed this setting during installation, you may use the following command to change the default editor to e.g. Nodepad++: git config --global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession&quot; See the following link for more information: Getting Started First Time Git Setup Commit title The first line of the commit message is the title. This should contain a short description of what changes have been done in the commit. Please adhere to these rules: Try limiting the length of the title to 50 characters never go above 72 If your change needs further explanation use the message body Separate the commit title from the message body with an blank line Prefix your commit message with the appropriate prefix (see table below) Use the imperative mood in the title The title should read as if “If I apply this commit it will &amp;lt;Commit message title&amp;gt;” e.g.: [TEST] Add missing OPA tests for Structure Panel -&amp;gt; “If I apply this commit it will [TEST] Add missing OPA tests for Structure Panel” Capiatlize the subject line Do not use puctuation in the title | Prefix | When to use? | | ————- | ——————————————————— | | [TEST] | Changes done in test code | | [FIX] | Changes done due to an incident | | [INTERNAL] | Minor changes (e.g.: TODO removal, ESLint corrections) | | [FEATURE] | Other cases not covered above | | [POM] | Updating the pom.xml | | [GITIGNORE] | Updating the .gitignore | Commit message body Use the message body to explain the details of the changes if needed (for trivial changes you may omit the message body completely). Please adhere to these rules: Wrap the text body at 72 characters Use the body to explain what you did and why instead of how (that should speak for itself from the code) Add references at the end of the commit message body (these will be converted to links in Gerrit) BCP: &amp;lt;incident number&amp;gt; JIRA: &amp;lt;backlog item id / task id / both&amp;gt; Leave an empty line at the end of the commit message body This is where the Gerrit Change-Id will be inserted A sample Git commit message: ``` [FEATURE] The Title is a short summary of your Commit More detailed explanatory text, if necessary. Wrap it to about 72 characters or so. In some contexts, the first line is treated as the subject of the commit and the rest of the text as the body. The blank line separating the summary from the body is critical (unless you omit the body entirely); various tools like log, shortlog and rebase can get confused if you run the two together. Explain the problem that this commit is solving. Focus on why you are making this change as opposed to how (the code explains that). Are there side effects or other unintuitive consequences of this change? Here’s the place to explain them. Further paragraphs come after blank lines. Bullet points are okay, too Typically a hyphen is used for the bullet Put any further references at the bottom, like this (these will generate clickable links in Gerrit): BCP: 123456789 JIRA: SCON2-1234, SCON2-4567 &amp;lt;Leave a blank line at the end, this is where the Gerrit Change-Id will be inserted&amp;gt; For more detailed description of these rules please see the following blog post on writing Git commit messages: - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) ### Commit hooks If you use Git locally on your machine, please use the following commit hooks to ensure that a Gerrit Change-Id is generated whenever you do a commit or a merge. Copy these two files and paste them into the `.git/hooks` folder of all your repositories: - [commit-msg](./hooks/commit-msg) - [prepare-commit-msg](./hooks/prepare-commit-msg) ### Aliases If you use Git locally on your machine, you may find the following aliases helpful (copy and paste them into your `.gintconfig` file): ```gitconfig [alias] ll = log --pretty='%C(red bold)%h%Creset |%C(yellow bold)%d%Creset %s %C(green)%cd %Creset%C(yellow)(%cr)%Creset %C(cyan)[%an]%Creset' --graph --date=format:'%Y-%m-%d %H:%M:%S' --all sc = show --pretty='parent %C(red bold)%p%Creset commit %C(red bold)%h%Creset%C(yellow bold)%d%Creset%n%n%w(72,2,2)%s%n%n%b%n%n%w(72,0,0)%Cgreen%ad (%ar)%Creset %C(cyan)%an%Creset' --date=format:'%Y-%m-%d %H:%M:%S' --name-only co = checkout st = status --short --branch gerrit = push origin HEAD:refs/for/masters1 Explanations: ll - This will do shortlog for all the branches (think “[l]og al[l]”) sc - You can use this to look into a commit (think “[s]how [c]ommit”) co - You can use this to checkout a banch (think “[c]heck[o]ut”) st - You can use this to see a status of your working directory (think “[st]atus”) gerrit - You can use this to push the current HEAD to Gerrit (no thinking is needed for this) References Useful links JavaScript Coding Guidelines https://help.sap.com/saphelp_uiaddon10/helpdata/en/ed/ed636b85584cd586b1fe231d2b5dac/content.htm?loaded_from_frameset=true WebIDE @ SAPJAM https://jam4.sapjam.com/groups/about_page/5EHZq2fndLhIvK0Q8DM25a General information about fiori https://wiki.wdf.sap.corp/wiki/display/fiorisuite/Fiori+Essentials https://wiki.wdf.sap.corp/wiki/display/fioritech/Fiori+Technology+Home UI5 @ Stack Overflow (both SAP UI5 and OpenUI5) http://stackoverflow.com/questions/tagged/sapui5 UI5 @ SAPJAM https://jam4.sapjam.com/groups/about_page/7MFgdXHJVVv2BWC8g0Ubep https://jam4.sapjam.com/groups/about_page/46nPHpwJRbaNkd9QFAWtiW UI5 topic owners http://vesapui5.dhcp.wdf.sap.corp:8000/ui5team/#/ownership UI5 @ Jira https://sapjira.wdf.sap.corp/secure/IssueHierarchyOverview!default.jspa?projectKey=CPOUIFPHOENIXCORE&amp;amp;displayMode=ranking Speaking JavaScript http://speakingjs.com/es5/index.html Exploring ES6 http://exploringjs.com/es6/ JSDoc: http://usejsdoc.org/ ESLint: https://eslint.org/ SAP recommended ESLint Code Checks: https://help.sap.com/saphelp_uiaddon10/helpdata/en/1b/a0e44f1036439b95f25527664f14f7/frameset.htm Sample ESLintRC file: .eslintrc Pro Git, a free online book on Git: https://git-scm.com/book/en/v2/ How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/ Hungarian Notation | Type | Prefix | Sample | | ——————— | ——— | ————- | | array | a | aEntries | | boolean | b | bEnabled | | date | d | dToday | | float | f | fDecimal | | function | fn | fnFunction | | int | i | iCount | | jQuery object | $ | $DomRef | | map / assoc. array | m | mParameters | | object | o | oDomRef | | regular expression | r | rPattern | | string | s | sId | | variant types | v | vVariant |</summary></entry></feed>

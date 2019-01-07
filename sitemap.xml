@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/routing/favorites/2019/01/03/coding_guidelines.html</loc>
+<lastmod>2019-01-03T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>/trace/2019/01/04/welcome-to-jekyll.html</loc>
+<lastmod>2019-01-04T16:42:14+01:00</lastmod>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/vc1_simulation.html</loc>
+</url>
+<url>
+<loc>/vc2_valuation.html</loc>
+</url>
+<url>
+<loc>/vc3_engine.html</loc>
+</url>
+</urlset>
